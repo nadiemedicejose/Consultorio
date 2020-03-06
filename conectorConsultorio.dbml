@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Consultorio" Class="conectorConsultorioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Consultorio.mdf;Integrated Security=True" SettingsObjectName="Consultorio.Properties.Settings" SettingsPropertyName="ConsultorioConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dentistas" Member="Dentistas">
+    <Type Name="Dentista">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="Char(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Especialidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
