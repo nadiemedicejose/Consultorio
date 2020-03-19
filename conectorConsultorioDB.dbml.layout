@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="conexionConsultorioDB">
+  <DataContextMoniker Name="/conexionConsultorioDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="987d06ba-9f71-44de-a3e6-57cd5e0b338f" absoluteBounds="5.625, 0.5, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/conexionConsultorioDBDataContext/Cita" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad126ff1-850a-4eea-882c-21afe4ee406d" absoluteBounds="5.6400000000000006, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06742c37-0499-4e0b-be1c-77132daca683" absoluteBounds="2.875, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/conexionConsultorioDBDataContext/Paciente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c70039f3-007e-4d87-8ac7-c4d30ad8485b" absoluteBounds="2.89, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52adbd8d-a888-48c0-a11a-ab57f6867b13" absoluteBounds="2.875, 6.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/conexionConsultorioDBDataContext/Dentista" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c3f5eb9-efeb-40ac-87c2-a2f181434857" absoluteBounds="2.89, 6.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6316bab3-df01-4a4b-8bf5-67406ce59228" absoluteBounds="2.875, 0.875, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/conexionConsultorioDBDataContext/Especialidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48df6656-bdf2-4084-b8a3-57bde385b921" absoluteBounds="2.89, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 4.53929768880208); (6.01041416666667 : 4.53929768880208 : JumpStart); (6.17708083333333 : 4.53929768880208 : JumpEnd); (6.625 : 4.53929768880208); (6.625 : 2.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/conexionConsultorioDBDataContext/Paciente/Paciente_Cita" />
+      <nodes>
+        <classShapeMoniker Id="06742c37-0499-4e0b-be1c-77132daca683" />
+        <classShapeMoniker Id="987d06ba-9f71-44de-a3e6-57cd5e0b338f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 7.10659912109375); (6.0937475 : 7.10659912109375); (6.0937475 : 2.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/conexionConsultorioDBDataContext/Dentista/Dentista_Cita" />
+      <nodes>
+        <classShapeMoniker Id="52adbd8d-a888-48c0-a11a-ab57f6867b13" />
+        <classShapeMoniker Id="987d06ba-9f71-44de-a3e6-57cd5e0b338f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 1.47199625651042); (5.625 : 1.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/conexionConsultorioDBDataContext/Especialidade/Especialidade_Cita" />
+      <nodes>
+        <classShapeMoniker Id="6316bab3-df01-4a4b-8bf5-67406ce59228" />
+        <classShapeMoniker Id="987d06ba-9f71-44de-a3e6-57cd5e0b338f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

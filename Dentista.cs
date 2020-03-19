@@ -3,36 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Consultorio
 {
-    class Dentistas
+    class Dentist
     {
-        conectorConsultorioDataContext bdConsultorio = new conectorConsultorioDataContext();
+        conexionConsultorioDBDataContext dbConsultorio = new conexionConsultorioDBDataContext();
 
-        public IQueryable MostrarTodosDGV()
+        public void MostrarDentistas(DataGridView dgvDentistas)
         {
-            var registros = from valor in bdConsultorio.Dentistas
-                            select valor;
-            return registros;
+            var registros = dbConsultorio.DentistasMostrarTodos();
+            dgvDentistas.DataSource = registros;
         }
 
-        public string MostrarTodosTxtBox()
+        public void BuscarDentista(TextBox txtDentistaID, TextBox txtNombre, TextBox txtDireccion, TextBox txtTelefono, TextBox txtEdad, ComboBox cmbEspecialidad)
         {
-            string dentistas = "";
-            var registros = from valor in bdConsultorio.Dentistas
+            var registros = from valor in dbConsultorio.BuscarDentista(Convert.ToInt32(txtDentistaID.Text))
                             select valor;
 
-            foreach (var reg in registros)
+            foreach (var dentista in registros)
             {
-                dentistas = dentistas + reg.Id + " " +
-                         reg.Nombre + " " +
-                         reg.Direccion + " " +
-                         reg.Telefono + " " +
-                         reg.Edad + " " +
-                         reg.Especialidad + "\r\n";
+                txtNombre.Text = dentista.Nombre;
+                txtDireccion.Text = dentista.Dirección;
+                txtTelefono.Text = dentista.Teléfono;
+                txtEdad.Text = dentista.Edad.ToString();
+                cmbEspecialidad.SelectedItem = dentista.Especialidad;
             }
-            return dentistas;
+        }
+
+        public void ObtenerEspecialidades(ComboBox cmbEspecialidad)
+        {
+            var registros = from valor in dbConsultorio.Especialidades
+                            select valor;
+            foreach (var especialidad in registros)
+            {
+                cmbEspecialidad.Items.Add(especialidad.NombreEspecialidad);
+            }
         }
     }
 }
