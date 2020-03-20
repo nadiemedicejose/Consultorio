@@ -21,20 +21,27 @@ namespace Consultorio
         {
             txtEspecialidad.Text = "";
 
-            var registros = from valor in dbConsultorio.BuscarEspecialidad(Convert.ToInt32(txtEspecialidadID.Text))
-                            select valor;
-            foreach (var especialidad in registros)
+            if (txtEspecialidadID.Text != "")
             {
-                txtEspecialidad.Text = especialidad.Especialidad;
-            }
+                var registros = dbConsultorio.BuscarEspecialidad(Convert.ToInt32(txtEspecialidadID.Text)).ToList();
 
-            //if (registros.Any())
-            //{
-                
-            //} else
-            //{
-            //    MessageBox.Show("No se encontró ninguna especialidad con el ID: " + txtEspecialidadID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                if (registros.Any())
+                {
+                    foreach (var especialidad in registros)
+                    {
+                        txtEspecialidad.Text = especialidad.Especialidad;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No existe la especialidad con ID: " + txtEspecialidadID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEspecialidadID.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("No ingresaste un ID de especialidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

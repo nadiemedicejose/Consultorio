@@ -24,16 +24,30 @@ namespace Consultorio
             txtPaciente.Text = "";
             txtDescripcion.Text = "";
 
-            var registros = from valor in dbConsultorio.BuscarCita(Convert.ToInt32(txtCitaID.Text))
-                            select valor;
-
-            foreach (var cita in registros)
+            if (txtCitaID.Text != "")
             {
-                txtDentista.Text = cita.Dentista;
-                txtEspecialidad.Text = cita.Especialidad;
-                txtPaciente.Text = cita.Paciente;
-                txtDescripcion.Text = cita.Descripción;
+                var registros = dbConsultorio.BuscarCita(Convert.ToInt32(txtCitaID.Text)).ToList();
+
+                if (registros.Any())
+                {
+                    foreach (var cita in registros)
+                    {
+                        txtDentista.Text = cita.Dentista;
+                        txtEspecialidad.Text = cita.Especialidad;
+                        txtPaciente.Text = cita.Paciente;
+                        txtDescripcion.Text = cita.Descripción;
+                    }
+                } else
+                {
+                    MessageBox.Show("No existe la cita con ID: " + txtCitaID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCitaID.Text = "";
+                }
             }
+            else
+            {
+                MessageBox.Show("No ingresaste un ID de cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

@@ -19,21 +19,42 @@ namespace Consultorio
 
         public void BuscarDentista(TextBox txtDentistaID, TextBox txtNombre, TextBox txtDireccion, TextBox txtTelefono, TextBox txtEdad, ComboBox cmbEspecialidad)
         {
-            var registros = from valor in dbConsultorio.BuscarDentista(Convert.ToInt32(txtDentistaID.Text))
-                            select valor;
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+            txtEdad.Text = "";
+            cmbEspecialidad.SelectedItem = null;
 
-            foreach (var dentista in registros)
+            if (txtDentistaID.Text != "")
             {
-                txtNombre.Text = dentista.Nombre;
-                txtDireccion.Text = dentista.Dirección;
-                txtTelefono.Text = dentista.Teléfono;
-                txtEdad.Text = dentista.Edad.ToString();
-                cmbEspecialidad.SelectedItem = dentista.Especialidad;
+                var registros = dbConsultorio.BuscarDentista(Convert.ToInt32(txtDentistaID.Text)).ToList();
+
+                if (registros.Any())
+                {
+                    foreach (var dentista in registros)
+                    {
+                        txtNombre.Text = dentista.Nombre;
+                        txtDireccion.Text = dentista.Dirección;
+                        txtTelefono.Text = dentista.Teléfono;
+                        txtEdad.Text = dentista.Edad.ToString();
+                        cmbEspecialidad.SelectedItem = dentista.Especialidad;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No existe el dentista con ID: " + txtDentistaID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDentistaID.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("No ingresaste un ID de dentista", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public void ObtenerEspecialidades(ComboBox cmbEspecialidad)
         {
+            cmbEspecialidad.Items.Clear();
             var registros = from valor in dbConsultorio.Especialidades
                             select valor;
             foreach (var especialidad in registros)

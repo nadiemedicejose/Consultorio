@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultorio));
             this.btnEspecialidades = new System.Windows.Forms.Button();
             this.btnPacientes = new System.Windows.Forms.Button();
             this.btnDentistas = new System.Windows.Forms.Button();
@@ -133,12 +134,13 @@
             this.Controls.Add(this.btnPacientes);
             this.Controls.Add(this.btnEspecialidades);
             this.Font = new System.Drawing.Font("DM Sans", 14.25F);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Consultorio";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultorio";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CerrarForm);
             this.ResumeLayout(false);
 
         }

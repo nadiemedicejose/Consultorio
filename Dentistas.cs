@@ -28,5 +28,26 @@ namespace Consultorio
         {
             objDentista.BuscarDentista(txtDentistaID, txtNombre, txtDireccion, txtTelefono, txtEdad, cmbEspecialidad);
         }
+
+        private void soloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo puedes ingresar números en este campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void CerrarForm(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Consultorio objConsultorio = new Consultorio();
+            objConsultorio.Show();
+            this.Hide();
+        }
     }
 }

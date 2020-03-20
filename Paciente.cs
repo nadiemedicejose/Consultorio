@@ -19,15 +19,31 @@ namespace Consultorio
 
         public void BuscarPaciente(TextBox txtPacienteID, TextBox txtNombre, TextBox txtDireccion, TextBox txtTelefono)
         {
-            var registros = from valor in dbConsultorio.BuscarPaciente(Convert.ToInt32(txtPacienteID.Text))
-                            select valor;
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
 
-            foreach (var paciente in registros)
+            if (txtPacienteID.Text != "")
             {
-                txtPacienteID.Text = paciente.PacienteID.ToString();
-                txtNombre.Text = paciente.Nombre;
-                txtDireccion.Text = paciente.Dirección;
-                txtTelefono.Text = paciente.Teléfono;
+                var registros = dbConsultorio.BuscarPaciente(Convert.ToInt32(txtPacienteID.Text)).ToList();
+
+                if (registros.Any())
+                {
+                    foreach (var paciente in registros)
+                    {
+                        txtNombre.Text = paciente.Nombre;
+                        txtDireccion.Text = paciente.Dirección;
+                        txtTelefono.Text = paciente.Teléfono;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No existe el paciente con ID: " + txtPacienteID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPacienteID.Text = "";
+                }
+            } else
+            {
+                MessageBox.Show("No ingresaste un ID de paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

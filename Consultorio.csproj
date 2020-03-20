@@ -157,6 +157,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Consultorio.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\arrow2.png" />
+    <None Include="Resources\arrow1.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\back.png" />
     <None Include="Resources\teeth.png" />
     <None Include="Resources\teeths.png" />
     <None Include="Resources\dentist.png" />
