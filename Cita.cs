@@ -41,11 +41,13 @@ namespace Consultorio
                 {
                     MessageBox.Show("No existe la cita con ID: " + txtCitaID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtCitaID.Text = "";
+                    txtCitaID.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("No ingresaste un ID de cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCitaID.Focus();
             }
 
         }

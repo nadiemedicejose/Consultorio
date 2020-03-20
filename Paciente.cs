@@ -40,10 +40,12 @@ namespace Consultorio
                 {
                     MessageBox.Show("No existe el paciente con ID: " + txtPacienteID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPacienteID.Text = "";
+                    txtPacienteID.Focus();
                 }
             } else
             {
                 MessageBox.Show("No ingresaste un ID de paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPacienteID.Focus();
             }
         }
     }

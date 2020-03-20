@@ -21,6 +21,7 @@ namespace Consultorio
         private void Citas_Load(object sender, EventArgs e)
         {
             objCita.MostrarCitas(dgvCitas);
+            txtCitaID.Focus();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

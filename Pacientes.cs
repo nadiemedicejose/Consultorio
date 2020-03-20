@@ -21,6 +21,7 @@ namespace Consultorio
         private void Pacientes_Load(object sender, EventArgs e)
         {
             objPaciente.MostrarPacientes(dgvPacientes);
+            txtPacienteID.Focus();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

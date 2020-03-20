@@ -21,6 +21,7 @@ namespace Consultorio
         private void Especialidades_Load(object sender, EventArgs e)
         {
             objEspecialidad.MostrarEspecialidades(dgvEspecialidades);
+            txtEspecialidadID.Focus();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

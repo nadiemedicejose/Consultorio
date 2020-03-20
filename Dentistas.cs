@@ -22,6 +22,7 @@ namespace Consultorio
         {
             objDentista.ObtenerEspecialidades(cmbEspecialidad);
             objDentista.MostrarDentistas(dgvDentistas);
+            txtDentistaID.Focus();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

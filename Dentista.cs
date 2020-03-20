@@ -44,11 +44,13 @@ namespace Consultorio
                 {
                     MessageBox.Show("No existe el dentista con ID: " + txtDentistaID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtDentistaID.Text = "";
+                    txtDentistaID.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("No ingresaste un ID de dentista", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDentistaID.Focus();
             }
         }
 

@@ -36,11 +36,13 @@ namespace Consultorio
                 {
                     MessageBox.Show("No existe la especialidad con ID: " + txtEspecialidadID.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtEspecialidadID.Text = "";
+                    txtEspecialidadID.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("No ingresaste un ID de especialidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEspecialidadID.Focus();
             }
         }
     }
