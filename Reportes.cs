@@ -16,5 +16,18 @@ namespace Consultorio
         {
             InitializeComponent();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Consultorio objRegresar = new Consultorio();
+            objRegresar.Show();
+            this.Hide();
+        }
+
+        private void Reportes_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

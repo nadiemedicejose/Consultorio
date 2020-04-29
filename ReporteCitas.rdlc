@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <Height>6in</Height>
+    <Style />
+  </Body>
+  <Width>8.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.5in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ReportName">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!ReportName</Value>
+                  <Style>
+                    <FontFamily>Product Sans</FontFamily>
+                    <FontSize>16pt</FontSize>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ReportName</rd:DefaultName>
+          <Top>0.87201in</Top>
+          <Left>1.18625in</Left>
+          <Height>0.35764in</Height>
+          <Width>3.45833in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Bottom</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Consultorio Dental</Value>
+                  <Style>
+                    <FontFamily>Product Sans</FontFamily>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.41715in</Top>
+          <Left>1.18625in</Left>
+          <Height>0.38542in</Height>
+          <Width>3.45833in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="logo">
+          <Source>Embedded</Source>
+          <Value>teethlogo</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.41715in</Top>
+          <Left>0.33208in</Left>
+          <Height>0.8125in</Height>
+          <Width>0.78472in</Width>
+          <ZIndex>2</ZIndex>
+          <ToolTip>logo</ToolTip>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>MediumSpringGreen</BackgroundColor>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontFamily>Product Sans</FontFamily>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value> / </Value>
+                  <Style>
+                    <FontFamily>Product Sans</FontFamily>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!TotalPages</Value>
+                  <Style>
+                    <FontFamily>Product Sans</FontFamily>
+                    <Color>White</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.375in</Top>
+          <Left>3.20312in</Left>
+          <Height>0.25in</Height>
+          <Width>2.09375in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>MediumSpringGreen</BackgroundColor>
+      </Style>
+    </PageFooter>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <EmbeddedImages>
+    <EmbeddedImage Name="teethlogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>be0172c6-a780-4799-b213-9a1fd5ae9e9b</rd:ReportID>
+</Report>
