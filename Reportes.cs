@@ -26,6 +26,8 @@ namespace Consultorio
 
         private void Reportes_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ConsultorioTodosDataSet.CitasMostrarTodos' table. You can move, or remove it, as needed.
+            this.CitasMostrarTodosTableAdapter.Fill(this.CitasTodasDS.CitasMostrarTodos);
 
             this.reportViewer1.RefreshReport();
         }

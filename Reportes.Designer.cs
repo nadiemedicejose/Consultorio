@@ -28,12 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes));
+            this.CitasMostrarTodosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CitasTodasDS = new CitasTodasDS();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.CitasMostrarTodosTableAdapter = new CitasTodasDSTableAdapters.CitasMostrarTodosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.CitasMostrarTodosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CitasTodasDS)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CitasMostrarTodosBindingSource
+            // 
+            this.CitasMostrarTodosBindingSource.DataMember = "CitasMostrarTodos";
+            this.CitasMostrarTodosBindingSource.DataSource = this.CitasTodasDS;
+            // 
+            // CitasTodasDS
+            // 
+            this.CitasTodasDS.DataSetName = "CitasTodasDS";
+            this.CitasTodasDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnRegresar
             // 
@@ -65,6 +82,9 @@
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "CitasTodas";
+            reportDataSource1.Value = this.CitasMostrarTodosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Consultorio.ReporteCitas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(6, 31);
             this.reportViewer1.Name = "reportViewer1";
@@ -72,6 +92,10 @@
             this.reportViewer1.Size = new System.Drawing.Size(606, 423);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // CitasMostrarTodosTableAdapter
+            // 
+            this.CitasMostrarTodosTableAdapter.ClearBeforeFill = true;
             // 
             // Reportes
             // 
@@ -86,8 +110,11 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Reportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CitasMostrarTodosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CitasTodasDS)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -98,5 +125,8 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.GroupBox groupBox2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource CitasMostrarTodosBindingSource;
+        private CitasTodasDS CitasTodasDS;
+        private CitasTodasDSTableAdapters.CitasMostrarTodosTableAdapter CitasMostrarTodosTableAdapter;
     }
 }
