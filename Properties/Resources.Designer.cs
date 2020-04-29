@@ -113,6 +113,16 @@ namespace Consultorio.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dental {
+            get {
+                object obj = ResourceManager.GetObject("dental", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dentist {
             get {
                 object obj = ResourceManager.GetObject("dentist", resourceCulture);

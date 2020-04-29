@@ -49,5 +49,12 @@ namespace Consultorio
         {
             Application.Exit();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            Reportes objReportes = new Reportes();
+            objReportes.Show();
+            this.Hide();
+        }
     }
 }

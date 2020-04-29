@@ -29,77 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultorio));
-            this.btnEspecialidades = new System.Windows.Forms.Button();
-            this.btnPacientes = new System.Windows.Forms.Button();
-            this.btnDentistas = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
+            this.btnDentistas = new System.Windows.Forms.Button();
+            this.btnPacientes = new System.Windows.Forms.Button();
+            this.btnEspecialidades = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnEspecialidades
+            // btnReportes
             // 
-            this.btnEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEspecialidades.BackColor = System.Drawing.Color.Transparent;
-            this.btnEspecialidades.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEspecialidades.FlatAppearance.BorderSize = 0;
-            this.btnEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEspecialidades.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEspecialidades.ForeColor = System.Drawing.Color.White;
-            this.btnEspecialidades.Image = global::Consultorio.Properties.Resources.teeth;
-            this.btnEspecialidades.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEspecialidades.Location = new System.Drawing.Point(333, 257);
-            this.btnEspecialidades.Name = "btnEspecialidades";
-            this.btnEspecialidades.Size = new System.Drawing.Size(166, 165);
-            this.btnEspecialidades.TabIndex = 3;
-            this.btnEspecialidades.Text = "Especialidades";
-            this.btnEspecialidades.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEspecialidades.UseVisualStyleBackColor = false;
-            this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
-            // 
-            // btnPacientes
-            // 
-            this.btnPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPacientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPacientes.FlatAppearance.BorderSize = 0;
-            this.btnPacientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPacientes.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.ForeColor = System.Drawing.Color.White;
-            this.btnPacientes.Image = global::Consultorio.Properties.Resources.patient;
-            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPacientes.Location = new System.Drawing.Point(333, 65);
-            this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(166, 165);
-            this.btnPacientes.TabIndex = 4;
-            this.btnPacientes.Text = "Pacientes";
-            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPacientes.UseVisualStyleBackColor = false;
-            this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
-            // 
-            // btnDentistas
-            // 
-            this.btnDentistas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDentistas.BackColor = System.Drawing.Color.Transparent;
-            this.btnDentistas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDentistas.FlatAppearance.BorderSize = 0;
-            this.btnDentistas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnDentistas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
-            this.btnDentistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDentistas.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDentistas.ForeColor = System.Drawing.Color.White;
-            this.btnDentistas.Image = global::Consultorio.Properties.Resources.dentist;
-            this.btnDentistas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDentistas.Location = new System.Drawing.Point(144, 257);
-            this.btnDentistas.Name = "btnDentistas";
-            this.btnDentistas.Size = new System.Drawing.Size(166, 165);
-            this.btnDentistas.TabIndex = 5;
-            this.btnDentistas.Text = "Dentistas";
-            this.btnDentistas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDentistas.UseVisualStyleBackColor = false;
-            this.btnDentistas.Click += new System.EventHandler(this.btnDentistas_Click);
+            this.btnReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = global::Consultorio.Properties.Resources.dental;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReportes.Location = new System.Drawing.Point(436, 266);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(166, 165);
+            this.btnReportes.TabIndex = 7;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnCitas
             // 
@@ -123,12 +80,79 @@
             this.btnCitas.UseVisualStyleBackColor = false;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
+            // btnDentistas
+            // 
+            this.btnDentistas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDentistas.BackColor = System.Drawing.Color.Transparent;
+            this.btnDentistas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDentistas.FlatAppearance.BorderSize = 0;
+            this.btnDentistas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnDentistas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnDentistas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDentistas.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDentistas.ForeColor = System.Drawing.Color.White;
+            this.btnDentistas.Image = global::Consultorio.Properties.Resources.dentist;
+            this.btnDentistas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDentistas.Location = new System.Drawing.Point(40, 266);
+            this.btnDentistas.Name = "btnDentistas";
+            this.btnDentistas.Size = new System.Drawing.Size(166, 165);
+            this.btnDentistas.TabIndex = 5;
+            this.btnDentistas.Text = "Dentistas";
+            this.btnDentistas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDentistas.UseVisualStyleBackColor = false;
+            this.btnDentistas.Click += new System.EventHandler(this.btnDentistas_Click);
+            // 
+            // btnPacientes
+            // 
+            this.btnPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPacientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnPacientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPacientes.FlatAppearance.BorderSize = 0;
+            this.btnPacientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnPacientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPacientes.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPacientes.ForeColor = System.Drawing.Color.White;
+            this.btnPacientes.Image = global::Consultorio.Properties.Resources.patient;
+            this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPacientes.Location = new System.Drawing.Point(333, 65);
+            this.btnPacientes.Name = "btnPacientes";
+            this.btnPacientes.Size = new System.Drawing.Size(166, 165);
+            this.btnPacientes.TabIndex = 4;
+            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPacientes.UseVisualStyleBackColor = false;
+            this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
+            // 
+            // btnEspecialidades
+            // 
+            this.btnEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEspecialidades.BackColor = System.Drawing.Color.Transparent;
+            this.btnEspecialidades.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEspecialidades.FlatAppearance.BorderSize = 0;
+            this.btnEspecialidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnEspecialidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(109)))), ((int)(((byte)(163)))));
+            this.btnEspecialidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEspecialidades.Font = new System.Drawing.Font("DM Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEspecialidades.ForeColor = System.Drawing.Color.White;
+            this.btnEspecialidades.Image = global::Consultorio.Properties.Resources.teeth;
+            this.btnEspecialidades.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEspecialidades.Location = new System.Drawing.Point(238, 266);
+            this.btnEspecialidades.Name = "btnEspecialidades";
+            this.btnEspecialidades.Size = new System.Drawing.Size(166, 165);
+            this.btnEspecialidades.TabIndex = 3;
+            this.btnEspecialidades.Text = "Especialidades";
+            this.btnEspecialidades.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEspecialidades.UseVisualStyleBackColor = false;
+            this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
+            // 
             // Consultorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.ClientSize = new System.Drawing.Size(642, 487);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnCitas);
             this.Controls.Add(this.btnDentistas);
             this.Controls.Add(this.btnPacientes);
@@ -151,5 +175,6 @@
         private System.Windows.Forms.Button btnPacientes;
         private System.Windows.Forms.Button btnDentistas;
         private System.Windows.Forms.Button btnCitas;
+        private System.Windows.Forms.Button btnReportes;
     }
 }
